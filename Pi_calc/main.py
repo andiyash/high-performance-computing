@@ -5,8 +5,11 @@ from numba.cuda.random import create_xoroshiro128p_states, xoroshiro128p_uniform
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# число потоков на блок
 TPB = 16
-pi_size = 16
+# количество итераций для вычисления π
+pi_size = 32
+# количество блолков на сетку
 BPG = int(pi_size / TPB)
 
 
